@@ -37,7 +37,5 @@ export default {
       .header-right 
              width: 1.24rem
              float: right
-             text-align : center
-         
-    
+             text-align : center     
 </style>
