@@ -2,7 +2,7 @@
 <div class="classifywrap">
   <swiper :options="swiperOption">
     <!-- slides -->
-    <swiper-slide><div class="classify" v-for="item of classifyList" :key="item.id">{{item.name}}</div></swiper-slide>
+    <swiper-slide v-for="(page,index) of pages" :key="index"><div class="classify" v-for="item of page" :key="item.id">{{item.name}}</div></swiper-slide>
     <!-- Optional controls -->
   </swiper>
 </div>
@@ -48,21 +48,32 @@ export default {
       ]
     }
   },
-  computed () {
-    
+  computed: {
+    pages () {
+      const pages = []
+      this.classifyList.forEach((item, index) => {
+        const page = Math.floor(index / 4)
+        if (!pages[page]) {
+          pages[page] = []
+        }
+        pages[page].push(item)
+      })
+      return pages
+    }
   }
 }
 </script>
 
 <style lang="stylus" scoped>
-.wrap >>> .swiper-pagination-bullet-active
+.classifywrap >>> .swiper-slide-active
   background-color #fff
+  padding-top 2.5%
 .classifywrap
    width 100%
    height 0
-   padding 5%
+   padding-bottom  15%
    .classify
-     width 25%
+     width 22%
      height 0
      padding-bottom 10%
      overflow hidden
@@ -70,6 +81,7 @@ export default {
      background-color rgb(242, 242, 242)
      color rgb(170, 170, 170)
      text-align center
-     margin-left 5%
+     margin-left 3%
      line-height 0.8rem
+     border-radius .4rem
 </style>
