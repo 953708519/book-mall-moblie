@@ -3,6 +3,7 @@
     <home-header></home-header>
     <home-swiper></home-swiper>
     <home-classify></home-classify>
+    <home-book></home-book>
   </div>
 </template>
 
@@ -10,12 +11,14 @@
 import HomeHeader from './components/Header'
 import HomeSwiper from './components/swiper'
 import HomeClassify from './components/classification'
+import HomeBook from './components/book'
 export default {
   name: 'Home',
   components: {
     HomeHeader,
     HomeSwiper,
-    HomeClassify
+    HomeClassify,
+    HomeBook
   }
 }
 </script>

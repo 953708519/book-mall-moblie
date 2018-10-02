@@ -67,7 +67,6 @@ export default {
 <style lang="stylus" scoped>
 .classifywrap >>> .swiper-slide-active
   background-color #fff
-  padding-top 2.5%
 .classifywrap
    width 100%
    height 0
@@ -78,6 +77,7 @@ export default {
      padding-bottom 10%
      overflow hidden
      float left
+     margin-top 2.5%
      background-color rgb(242, 242, 242)
      color rgb(170, 170, 170)
      text-align center
