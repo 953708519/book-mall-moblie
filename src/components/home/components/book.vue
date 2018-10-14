@@ -18,29 +18,11 @@
 <script>
 export default {
   name: 'HomeBook',
+  props: {
+    bookList: Array
+  },
   data () {
     return {
-      bookList: [{
-        id: '0001',
-        name: '白说',
-        author: '白岩松',
-        imgUrl: require('../../../assets/images/bys-b.jpg'),
-        price: '￥41.90'
-      },
-      {
-        id: '0002',
-        name: '复仇者的秘密',
-        author: '周业娅',
-        imgUrl: require('../../../assets/images/hb1.jpg'),
-        price: '￥34.30'
-      },
-      {
-        id: '0003',
-        name: '鲁迅杂文精选',
-        author: '鲁迅',
-        imgUrl: require('../../../assets/images/hb-r1.jpg'),
-        price: '￥25.30'
-      }]
     }
   }
 }
