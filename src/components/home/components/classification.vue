@@ -3,7 +3,8 @@
   <swiper :options="swiperOption">
     <!-- slides -->
     <swiper-slide v-for="(page,index) of pages" :key="index">
-      <div class="classify" v-for="item of page" :key="item.id">{{item.name}}</div>
+        <router-link to="/allclassify" class="classify"></router-link>
+        <div class="classify" v-for="item of page" :key="item.id">{{item.name}}</div>
     </swiper-slide>
     <!-- Optional controls -->
   </swiper>

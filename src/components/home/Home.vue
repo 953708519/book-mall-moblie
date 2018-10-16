@@ -2,7 +2,7 @@
   <div>
     <home-header></home-header>
     <home-swiper :swiperList="swiperList"></home-swiper>
-    <home-classify :classifyList="classifyList"></home-classify>
+    <home-scroll :classifyList="classifyList"></home-scroll>
     <home-book :bookList="bookList"></home-book>
   </div>
 </template>
@@ -10,16 +10,16 @@
 <script>
 import HomeHeader from './components/Header'
 import HomeSwiper from './components/swiper'
-import HomeClassify from './components/classification'
 import HomeBook from './components/book'
+import HomeScroll from './components/scroll'
 import axios from 'axios'
 export default {
   name: 'Home',
   components: {
     HomeHeader,
     HomeSwiper,
-    HomeClassify,
-    HomeBook
+    HomeBook,
+    HomeScroll
   },
   data () {
     return {
